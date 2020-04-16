@@ -4,7 +4,10 @@ using namespace std;
 
 int main() {
 
-	cout << "Starting program..." << flush;
+	int numberCats{ 5 };  //Verifying the new way to initialize variables
+	int numberDogs = 6;  //Verifying the old way to initialize variables
+
+	cout << "Starting program..." << endl;
 
 	cout << "This is some text." << endl;
 
