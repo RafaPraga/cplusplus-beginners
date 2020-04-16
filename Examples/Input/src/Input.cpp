@@ -7,13 +7,17 @@
 //============================================================================
 
 #include <iostream>
+#include <string> //added by me in order to use "getline"
 using namespace std;
 
 int main() {
 
 	cout << "Enter your name: " << flush;
 	string input;
-	cin >> input;
+
+	//cin >> input;  //The old way
+	getline(cin, input);    // The new and better way (It captures the whole line).
+
 	cout << "You entered: " << input << endl;
 
 	cout << "Enter a number: " << flush;
