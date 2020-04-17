@@ -7,6 +7,8 @@
 //============================================================================
 
 #include <iostream>
+#include <array>  //This was necessary in order to add the instruction: std::array<double, 4> numbers{ 4.5, 2.3, 7.2, 8.1 };
+
 using namespace std;
 
 int main() {
@@ -29,7 +31,10 @@ int main() {
 	cout << endl << "Array of doubles" << endl;
 	cout << "=================" << endl;
 
-	double numbers[4] = { 4.5, 2.3, 7.2, 8.1 };
+	//double numbers[4] = { 4.5, 2.3, 7.2, 8.1 };  // Old way of initializing.
+	//double numbers[] = { 4.5, 2.3, 7.2, 8.1 };  // New way of initializing.
+	std::array<double, 4> numbers{ 4.5, 2.3, 7.2, 8.1 }; // NEWER way of initializing.
+
 
 	for (int i = 0; i < 4; i++) {
 		cout << "Element at index " << i << ": " << numbers[i] << endl;
