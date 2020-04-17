@@ -19,6 +19,7 @@ int main() {
 	cat1.speak();
 	cat1.jump();
 
+	speak();
 
 	return 0;
 }
