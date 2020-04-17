@@ -45,7 +45,7 @@ int main() {
 
 	int numberArray[8] = { };
 
-	for (int i = 0; i < 8; i++) {
+	for (int i = 0; i < 8; i++) { 
 		cout << "Element at index " << i << ": " << numberArray[i] << endl;
 	}
 
