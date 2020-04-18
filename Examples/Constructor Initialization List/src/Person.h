@@ -17,8 +17,8 @@ private:
 	int age;
 
 public:
-	Person();
-	Person(string name, int age);
+	Person() : name(""), age(0) {};
+	Person(string name, int age) : name(name), age(age) {};
 
 	string toString();
 };

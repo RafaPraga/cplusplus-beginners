@@ -8,16 +8,6 @@
 #include "Person.h"
 #include <sstream>
 
-Person::Person() : name(""), age(0) {
-
-
-}
-
-Person::Person(string name, int age) : name(name), age(age) {
-
-	cout << "Memory location of object: " << this << endl;
-}
-
 
 string Person::toString() {
 	stringstream ss;
