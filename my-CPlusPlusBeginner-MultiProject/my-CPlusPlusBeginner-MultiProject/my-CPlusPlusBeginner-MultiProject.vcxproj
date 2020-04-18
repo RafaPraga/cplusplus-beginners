@@ -138,6 +138,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Examples\Constructor Initialization List\src\Person.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Examples\Constructor Initialization List\src\Person.cpp" />
+    <ClCompile Include="..\..\Examples\Constructor Initialization List\src\This.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
