@@ -15,9 +15,9 @@ private:
 
 public:
 	Animal() { cout << "Animal created." << endl; };
-	Animal(const Animal& other): name(other.name) { cout << "Animal created by copying." << endl; };
+	Animal(const Animal& other) : name(other.name) { other.speak(); cout << "Animal created by copying." << endl; };
 	void setName(string name) { this->name = name; };
-	void speak() const { cout << "My name is: " << name << endl; }
+	void speak()  { cout << "My name is: " << name << endl; }  /* Eliminating const has impeded the above use of other.speak()*/
 };
 
 int main() {
