@@ -7,34 +7,54 @@
 //============================================================================
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-class Animal {
+class Film
+{
 private:
-	string name;
+	string countryStr;
+	int widthInt;
+	int heightInt;
+	long lengthLng; /*in milliseconds*/
 
 public:
-	Animal() { cout << "Animal created." << endl; };
-	Animal(const Animal& other) : name(other.name) { other.speak(); cout << "Animal created by copying." << endl; };
-	void setName(string name) { this->name = name; };
-	void speak()  { cout << "My name is: " << name << endl; }  /* Eliminating const has impeded the above use of other.speak()*/
+	Film() { cout << "Constructor was called." << endl; };
+	Film(const Film& other) : countryStr(other.countryStr), widthInt(other.widthInt), heightInt(other.heightInt), lengthLng(other.lengthLng) { cout << "Copy-constructor was called." << endl; other.viewDescription(); };
+	
+	void setCountry(string inputStr) { countryStr = inputStr; };
+	void setWidthInt(int inputInt) { widthInt = inputInt; };
+	void setHeightInt(int inputInt) { heightInt = inputInt; };
+	void setLengthLng(long inputLng) { lengthLng = inputLng; };
+
+	string getCountryStr() const { return countryStr; };
+	long getLengthLng() const { return  lengthLng; };
+
+	string getDimStr() const { return to_string(widthInt) + "x" + to_string(heightInt); };
+
+	void viewDescription() const { cout << "Country: " << getCountryStr() << endl << "Dimensions: " << getDimStr() << endl << "Length: " << getLengthLng() << endl; };
 };
 
-int main() {
+int main(void)
+{
+	Film onTheWebObj;
 
-	Animal animal1;
+	onTheWebObj.setWidthInt(500);
+	onTheWebObj.setHeightInt(300);
+	onTheWebObj.setLengthLng(600);
+	onTheWebObj.setCountry("Slovakia");
 
-	animal1.setName("Freddy");
+	onTheWebObj.viewDescription();
 
-	Animal animal2 = animal1;
-	animal2.speak();
-	animal2.setName("Bob");
+	cout << endl << endl;
 
-	animal1.speak();
-	animal2.speak();
+	Film onTheServerObj = onTheWebObj;
 
-	Animal animal3(animal1);
-	animal3.speak();
+	cout << endl << endl;
+
+	onTheServerObj.viewDescription();
+
 
 	return 0;
 }
