@@ -20,7 +20,7 @@ public:
 	}
 
 	Animal(const Animal& other) :
-			name(other.name) {
+		name(other.name) {
 		cout << "Animal created by copying." << endl;
 	}
 
@@ -40,20 +40,33 @@ public:
 
 int main() {
 
-	Animal *pAnimal = new Animal[10];
+	Animal* pAnimal = new Animal[10];
 
-	pAnimal[5].setName("George");
-	pAnimal[5].speak();
 
-	delete [] pAnimal;
+	char letterChr = 'a';
 
-	char *pMem = new char[1000];
+	for (int iInt = 0; iInt < 10; iInt++)
+	{
+		string nameStr(5, letterChr);
+		pAnimal[iInt].setName(nameStr);
+
+		pAnimal[iInt].speak();
+
+		letterChr++;
+	}
+
+	/*pAnimal[5].setName("George");
+	pAnimal[5].speak();*/
+
+	delete[] pAnimal;
+
+	/*char *pMem = new char[1000];
 	delete [] pMem;
 
-	char c = 'a';
+
 	c++;
 	string name(5, c);
-	cout << name << endl;
+	cout << name << endl;*/
 
 
 	return 0;
