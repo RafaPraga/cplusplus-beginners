@@ -44,10 +44,11 @@ int main() {
 
 
 	char letterChr = 'a';
+	string nameStr;
 
 	for (int iInt = 0; iInt < 10; iInt++)
 	{
-		string nameStr(5, letterChr);
+		nameStr = string(5, letterChr);
 		pAnimal[iInt].setName(nameStr);
 
 		pAnimal[iInt].speak();
