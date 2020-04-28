@@ -29,5 +29,8 @@ int main() {
 
 	std::cout << "text5Str = " << text5Str << " size = " << sizeof(text5Str) << endl;
 
+	/*THERE IS A VERY GOOD ARTICLE ABOUT char[] vs. string. See 
+	   https://www.prismnet.com/~mcmahon/Notes/strings.html   */
+
 	return 0;
 }

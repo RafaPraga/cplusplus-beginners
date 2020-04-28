@@ -50,11 +50,11 @@ void freeMemory(char *pMem) {
 
 int main() {
 
-	string texts[] = {"apple", "orange", "banana"};
+	string texts[] = {"apple", "orange", "banana"}; /*5+6+6*/
 
 	cout << sizeof(texts) << endl;
 
-	show3(texts);
+	show1(3, texts);
 
 	char *pMemory = getMemory();
 	freeMemory(pMemory);
