@@ -7,6 +7,7 @@
 //============================================================================
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -15,11 +16,18 @@ int main() {
 	string text1 = "Hello ";
 	string text2 = "Fred";
 
-	string text3 = text1 + text2;
+	string text3Str = text1 + text2;
 
-	cout << text1 << text2 << endl;
+	char text4Str[10] = {"ab"};
+	char text5Str[] = { "xy" };
 
-	cout << text3 << endl;
+	std::cout << text1 << text2 << endl;
+
+	std::cout << "text3Str = " << text3Str << endl;
+
+	std::cout << "text4Str = " << text4Str << " size = " << sizeof(text4Str) << endl;
+
+	std::cout << "text5Str = " << text5Str << " size = " << sizeof(text5Str) << endl;
 
 	return 0;
 }
