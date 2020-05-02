@@ -18,6 +18,9 @@
     <ClCompile Include="..\..\Examples\Static\src\Static.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\NewsVideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\myHeader.h">

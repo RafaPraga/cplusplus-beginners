@@ -29,35 +29,15 @@ private:
 	int heightInt;
 
 public:
-	NewsVideo(long lengthInputLng, int widthInputInt, int heightInputInt) :
-		lengthLng{ lengthInputLng },
-		widthInt{ widthInputInt },
-		heightInt{ heightInputInt }
-	{
-		orderInt = countInt++; /*Exercise 4: Try incrementing static int field with a postfix increment operator.*/
-		std::cout << "NewsVideo objected was constructed." << std::endl;
-
-	};
+	NewsVideo(long lengthInputLng, int widthInputInt, int heightInputInt);
 
 	/*Exercise 2: Define and output a non-static field.*/
-	long getLengthLng()
-	{
-		return lengthLng;
-	};
+	long getLengthLng();
 
-	int getWidthInt()
-	{
-		return widthInt;
-	};
+	int getWidthInt();
 
-	int getHeightLng()
-	{
-		return heightInt;
-	};
+	int getHeightLng();
 
-	int getOrderInt()
-	{
-		return orderInt;
-	};
+	int getOrderInt();
 
 };

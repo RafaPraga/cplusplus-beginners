@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Examples\Static\src\Static.cpp" />
+    <ClCompile Include="..\NewsVideo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\myHeader.h" />
