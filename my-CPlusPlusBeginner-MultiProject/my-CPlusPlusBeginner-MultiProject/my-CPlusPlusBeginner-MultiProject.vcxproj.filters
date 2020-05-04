@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Examples\SDL Basic\src\SDL Basic.cpp">
+    <ClCompile Include="..\..\Examples\SDL Window\src\SDL Basic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
